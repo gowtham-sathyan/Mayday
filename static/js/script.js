@@ -21,6 +21,22 @@ $('#registerBtn').click(function(){
         }
 
 });
+$('#loginBtn').click(function(){
+    var email=$('#email').val();
+    var pwd=$('#password').val();
+    if(!email||!pwd){alert('Please make sure that all the inputs are filled');}
+    else {
+        console.log(email, pwd);
+        var data=JSON.stringify({email:email,pwd:pwd});
+        console.log(data);
+        var obj=new XMLHttpRequest();
+        obj.open('POST','http://localhost:8000/login',true);
+        obj.setRequestHeader('Content-Type','application/json');
+        obj.send(data);
+    }
+
+});
+
 
 
 
