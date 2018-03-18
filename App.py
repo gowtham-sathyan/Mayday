@@ -23,5 +23,15 @@ def registration():
         print(fname,lname,pwd,email,mobile,state,city)
     return render_template('registration.html')
 
+@app.route("/login", methods=['POST', 'GET'])
+def login():
+    if request.method == 'POST':
+        data = request.get_json()
+        print(data)
+        email = str(data['email'])
+        pwd=str(data['pwd'])
+        print(pwd,email)
+    return render_template('login.html')
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8000, debug=True)

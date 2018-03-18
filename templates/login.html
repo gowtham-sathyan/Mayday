@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='../static/css/materialize.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='../static/css/style.css') }}">
+</head>
+<body>
+<div class="row" id="login">
+    <h2 class="headerCenter">Login</h2>
+    <div class="col s12 m8 push-m2 l6 push-l3">
+        <div class="input-field col s12">
+            <input id="email" type="email" class="validate" required>
+            <label for="email">E-mail</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="password" type="password" class="validate" required>
+            <label for="password">Password</label>
+        </div>
+        <a href="/registration">Don't have an account?</a><br/>
+        <a class="waves-effect waves-light btn" id="loginBtn">Login </a>
+    </div>
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='../static/js/jquery-3.3.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='../static/js/materialize.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='../static/js/script.js') }}"></script>
+</body>
+</html>
